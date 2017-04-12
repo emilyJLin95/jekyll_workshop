@@ -1,5 +1,13 @@
 # jekyll_workshop
 
+# Installation
+## Mac
+1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like [rbenv](https://github.com/rbenv/rbenv), but that's beyond the scope of this workshop.
+2. Now you need to be able to install "gems", which are Ruby packages. [RubyGems](https://github.com/rubygems/rubygems) is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem` command. If you don't get a path returned, you can download RubyGems [here](https://rubygems.org/pages/download/).
+3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`.
+
+# Workshop
+
 Each workshop session will be ~60 minutes on a web technology, tool, framework, or concept. It will consist of both a short presentation as well as a tutorial. The tutorial will be a written online document in the form of a [markdown](https://guides.github.com/features/mastering-markdown/) readme file in a git repo — you can start by forking this very repo. During the tutorial section the class will work in teams of 3 following along with the instructions in the document. The team presenting will answer questions and help the individual teams along.
 
 
