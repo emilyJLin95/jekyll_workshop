@@ -75,12 +75,12 @@ There's a known issue with Ruby on Windows that makes the installation process a
    1. If that gives you a version number, go to step 2!
    2. If not, install Ruby (either by Chocolatey/your preferred Windows package manager or manually).
 2. Gem is Ruby’s package manager (similar to NPM for Node). However, due to a bug with windows, in order to get Gem you need to download the gem file manually.
-  1.  Go to [the RubyGems download site](https://rubygems.org/pages/download#formats). Choose the zip version, and unzip it in a easily-reachable directory (like C:\, C:\Documents, etc)
-  2.  cd into the directory where you unzipped it.
-  3. Run in terminal: `gem install --local your_directory_path\rubygems-update-2.6.10.gem `, replacing `your_directory_path` with the directory you chose. For example, my command says, `C:\>gem install --local C:\rubygems-update-2.6.10.gem`
+    1.  Go to [the RubyGems download site](https://rubygems.org/pages/download#formats). Choose the zip version, and unzip it in a easily-reachable directory (like C:\, C:\Documents, etc)
+    2.  cd into the directory where you unzipped it.
+    3. Run in terminal: `gem install --local your_directory_path\rubygems-update-2.6.10.gem `, replacing `your_directory_path` with the directory you chose. For example, my command says, `C:\>gem install --local C:\rubygems-update-2.6.10.gem`
 3. Update RubyGems! type in terminal, `update_rubygems`.
 4. To make sure the gem installed correctly, type `gem --version`.
-  1. If that gives you a version number, great! Go to step 5. :smile:
+    1. If that gives you a version number, great! Go to step 5. :smile:
 5. The rubyUpdate gem can be safely uninstalled. Type `gem uninstall rubygems-update -x`.  
 
 ## Workshop Overview
