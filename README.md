@@ -2,14 +2,35 @@
 
 [Jekyll](https://jekyllrb.com/) is a static site generator that automates a lot of the site creation progress. It's popular for personal and blogging sites.
 
+## Getting started
 
-## Installation
+Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
-# What does the `bundler` gem do?
+### Mac
+1. Your computer probably comes with Ruby installed! You can verify this with which ruby. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the which gem command. If you don't get a path returned, you can download RubyGems here.
+3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute gem install jekyll bundler. If you didn't install Ruby with homebrew or rbenv, you may have to run sudo gem install jekyll bundler.
+
+#### What does the `bundler` gem do?
 
 - Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
 
-# Starting a jekyll project
+### Windows
+There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
+1. Check if you already have Ruby installed. Run your terminal as an administrator (right click when opening and choose, "Run as administrator") and type `ruby -v`
+   1. If that gives you a version number, go to step 2!
+   2. If not, install Ruby (either by Chocolatey/your preferred Windows package manager or manually).
+2. Gem is Ruby’s package manager (similar to NPM for Node). However, due to a bug with windows, in order to get Gem you need to download the gem file manually.
+    1.  Go to [the RubyGems download site](https://rubygems.org/pages/download#formats). Choose the zip version, and unzip it in a easily-reachable directory (like C:\, C:\Documents, etc)
+    2.  cd into the directory where you unzipped it.
+    3. Run in terminal: `gem install --local your_directory_path\rubygems-update-2.6.10.gem `, replacing `your_directory_path` with the directory you chose. For example, my command says, `C:\>gem install --local C:\rubygems-update-2.6.10.gem`
+3. Update RubyGems! type in terminal, `update_rubygems`.
+4. To make sure the gem installed correctly, type `gem --version`.
+    1. If that gives you a version number, great! Go to step 5. :smile:
+5. The rubyUpdate gem can be safely uninstalled. Type `gem uninstall rubygems-update -x`.  
+
+
+## Starting a jekyll project
 
 `jekyll new blog`
 
@@ -20,7 +41,7 @@ The command `bundle exec jekyll serve` will run your files on `localhost:4000`
 It’s a barebones look right now though- the default `minima` theme
 You can now close the server with `ctrl+c`
 
-# Adding a theme
+## Adding a theme
 Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
 
 Edit `_config.yml` to use whiteglass theme and its plugins (replace lines 29-31 with the following):
@@ -60,28 +81,9 @@ Because you added gems to `_config.yml` and `Gemfile`, you need to install them 
 
 Now you can simply run `bundle exec jekyll serve` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
-# Workshop
+This is what your site should now look like:
 
-## Install
-
-### Mac
-1. Your computer probably comes with Ruby installed! You can verify this with which ruby. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the which gem command. If you don't get a path returned, you can download RubyGems here.
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute gem install jekyll bundler. If you didn't install Ruby with homebrew or rbenv, you may have to run sudo gem install jekyll bundler.
-
-### Windows
-There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
-1. Check if you already have Ruby installed. Run your terminal as an administrator (right click when opening and choose, "Run as administrator") and type `ruby -v`
-   1. If that gives you a version number, go to step 2!
-   2. If not, install Ruby (either by Chocolatey/your preferred Windows package manager or manually).
-2. Gem is Ruby’s package manager (similar to NPM for Node). However, due to a bug with windows, in order to get Gem you need to download the gem file manually.
-    1.  Go to [the RubyGems download site](https://rubygems.org/pages/download#formats). Choose the zip version, and unzip it in a easily-reachable directory (like C:\, C:\Documents, etc)
-    2.  cd into the directory where you unzipped it.
-    3. Run in terminal: `gem install --local your_directory_path\rubygems-update-2.6.10.gem `, replacing `your_directory_path` with the directory you chose. For example, my command says, `C:\>gem install --local C:\rubygems-update-2.6.10.gem`
-3. Update RubyGems! type in terminal, `update_rubygems`.
-4. To make sure the gem installed correctly, type `gem --version`.
-    1. If that gives you a version number, great! Go to step 5. :smile:
-5. The rubyUpdate gem can be safely uninstalled. Type `gem uninstall rubygems-update -x`.  
+![Alt text](./img/basic_whiteglass.png "Optional Title")
 
 ## Workshop Overview
 
