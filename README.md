@@ -52,12 +52,15 @@ There's a known issue with Ruby on Windows that makes the installation process a
 
 ## Starting a jekyll project
 :rocket: Now that you have the prerequisites set up, you can start your first jekyll site with the following command.
-`jekyll new blogtitle`
 
-`cd blog`
+```jekyll new blogtitle```
+
+Now when you enter the directory created for your site with `cd blogtitle` you should see a directory structure like this:
+
+![Image](/img/initial-directory.png)
 
 ## Serving your project on a browser
-The command `bundle exec jekyll serve` will run your files on `localhost:4000`
+:rocket: The command `bundle exec jekyll serve` will run your files on `localhost:4000`
 It’s a barebones look right now though- the default `minima` theme
 You can now close the server with `ctrl+c`
 
