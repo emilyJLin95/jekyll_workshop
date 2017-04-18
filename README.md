@@ -181,7 +181,7 @@ The following image should now appear in your blog post:
 :white_check_mark: You have now successfully created a blog post! It should look something along the lines of this:
 ![checkpoint](img/firstpost-checkpoint.png)
 
-## What's Happening?
+## Customization
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
 
 We will now explore more of what is actually going on inside the directory.
@@ -211,7 +211,7 @@ A popular practice with Jekyll is to _modularize_ your code-- that is, create el
 
 Let's try customizing this theme's layout!
 
-## Customize your Theme with a Layout
+#### Customize your Theme with a Layout
 Create a directory called `_includes`.
 ```
 mkdir _includes
