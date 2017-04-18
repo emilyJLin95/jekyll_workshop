@@ -13,7 +13,7 @@ To complete this workshop, follow the following steps:
 4. [Add a Theme](#adding-a-theme)
 5. [Make your first post](#make-your-first-post)
 6. [Customize your Theme](#customization)
-7. [Deploy to Github Pages](#pushing-to-github)
+7. [Deploy to Github Pages](#deploy-your-site-to-github-pages)
 
 Be sure to look out for the following notations:
 * :computer: run in terminal
@@ -194,7 +194,7 @@ The following image should now appear in your blog post:
 ![checkpoint](img/firstpost-checkpoint.png)
 
 ## Customization
-###What's Happening? Understanding the Directory Structure of Jekyll themes
+### What's Happening? Understanding the Directory Structure of Jekyll themes
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Modularization is where certain elements such as a layout or headers/footers have a predefined style.
 
 Jekyll reads this information through the different folders in the directory. For example, the compiled site will be in the `_sites` folders
