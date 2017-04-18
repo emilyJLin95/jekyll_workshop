@@ -143,9 +143,18 @@ I also can put code snippets in my blog posts such as
 `cd myFolder`
 
 ```
+:rocket: To add a picture to your post, you can use Markdown syntax for adding an image:
+```
+![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
+
+```
+The following image should now appear in your blog post:
+![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
 
 
-:white_check_mark: You have now successfullly created a blog post!
+:white_check_mark: You have now successfully created a blog post! It should look something along the lines of this:
+![checkpoint](img/firstpost-checkpoint.png)
+
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
 
@@ -175,7 +184,10 @@ This is the same method used to edit the CSS in the site.
 #### Installing the Github-Pages gem
 The final step is to deploy your site to Github Pages. Fortunately, a great benefit is that Github-Pages works very easily with Jekyll, especially with the `github-pages` gem.
 
-:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line `gem github-pages`.
+:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line
+```
+gem github-pages
+```
 
 Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
 
