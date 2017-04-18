@@ -117,6 +117,8 @@ This is what your site should now look like:
 
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
 
+:white_check_mark: You have now upgraded the theme on your Jekyll site!
+
 ## Make your First Post!
 Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.All of your posts will live in the folder `_posts`.
 
