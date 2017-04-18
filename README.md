@@ -27,10 +27,15 @@ Be sure to look out for the following notations:
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
 ### Mac
+<<<<<<< HEAD
 1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
 
 2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem command`. If you don't get a path returned, you can download RubyGems here.
 
+=======
+1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem` command. If you don't get a path returned, you can download RubyGems here.
+>>>>>>> 67b9aa2b9b5b2b3bfb250fafb692d213f208b488
 3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.
 
 #### What does the `bundler` gem do?
@@ -62,14 +67,33 @@ Now when you enter the directory created for your site with `cd blogtitle` you s
 ![Image](/img/initial-directory.png)
 
 ## Serving your project on a browser
+<<<<<<< HEAD
 :rocket: The command `bundle exec jekyll serve` will run your files on `localhost:4000`
 It’s a barebones look right now though - the default `minima` theme
 You can now close the server with `ctrl+c`
+=======
+:rocket: You are now ready to serve your initial site using the command
+```bundle exec jekyll serve```
+Your site will now be accessible locally at
+```http://localhost:4000```
+
+You should see something similar to this:
+![Image](/img/default-jekyll.png)
+
+This the default `minima` theme that comes with a new jekyll site.
+You can now close the server with `ctrl+c` and launch it again at any time with `jekyll serve`
+
+:white_check_mark: You have now successfully created your first jekyll site and served it locally!
+>>>>>>> 67b9aa2b9b5b2b3bfb250fafb692d213f208b488
 
 ## Adding a theme
-Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
+As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
 
+<<<<<<< HEAD
 Edit `_config.yml` to use the whiteglass theme and its plugins (replace lines 29-31 with the following):
+=======
+:rocket: Edit the `_config.yml` file to use whiteglass theme and its plugins by replacing lines 29-31 with the following:
+>>>>>>> 67b9aa2b9b5b2b3bfb250fafb692d213f208b488
 
 
 ```
@@ -91,24 +115,26 @@ jekyll-archives:
     category: /categories/:name/
 ```
 
-Now, replace line 15 of your `Gemfile` with: `gem "jekyll-whiteglass"`
+:rocket: Now, replace line 15 of your `Gemfile` with: `gem "jekyll-whiteglass"`
 
 You can see what other plugins exist at https://jekyllrb.com/docs/plugins/#available-plugins
 
-The theme also comes with some helpful defaults like an about and an archives page. You can add these files to your blog by running:
+The `whiteglass` theme also comes with some helpful default plugins like an about and an archives page. :rocket: You can add these files to your blog by running:
 ```
 rm index.md
 curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"
 curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
 ```
 
-Because you added gems to `_config.yml` and `Gemfile`, you need to install them by running `bundle install`
+:rocket: Because you added gems to `_config.yml` and `Gemfile`, you need to install them by calling `bundle install` in your terminal
 
-Now you can simply run `bundle exec jekyll serve` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
+:rocket: Now you can see how your new theme looks by running ```bundle exec jekyll serve``` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
 This is what your site should now look like:
 
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
+
+:white_check_mark: You have now upgraded the theme on your Jekyll site!
 
 ## Make your First Post!
 Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.All of your posts will live in the folder `_posts`.
