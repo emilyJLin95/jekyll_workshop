@@ -27,6 +27,11 @@ Be sure to look out for the following notations:
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
 ### Mac :rocket: :computer:
+
+By the time you're done with this section, your terminal should look very similar to this one (all `which` does is confirm that something is properly installed):
+
+![](img/which.png)
+
 1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
 
 2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running `which gem`. If you don't get a path returned, you can download RubyGems [here](https://rubygems.org/pages/download/).
