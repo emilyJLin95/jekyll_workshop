@@ -94,9 +94,12 @@ You can now close the server with `ctrl+c` and launch it again at any time with 
 ## Adding a theme
 As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`Cayman` theme](https://github.com/pages-themes/cayman). (Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages and Cayman is one of them.)
 
-:rocket: Edit *_config.yml* --> Replace the theme of 'minima' with cayman.
+:rocket: Edit *_config.yml* --> Replace the theme of `minima` with `jekyll-theme-cayman`.
+```
+theme: jekyll-theme-cayman
+```
 
-:rocket: Because you added a gem to `_config.yml`, you need to install it by running `bundle install` in your terminal.
+:rocket: Because you added a gem to `Gemfile`, you need to install it by running `bundle install` in your terminal.
 
 :rocket: Now you can see how your new theme looks by running ```bundle exec jekyll serve``` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
