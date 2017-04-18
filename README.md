@@ -92,41 +92,11 @@ You can now close the server with `ctrl+c` and launch it again at any time with 
 :white_check_mark: You have now successfully created your first jekyll site and served it locally!
 
 ## Adding a theme
-As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
+As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`Cayman` theme](https://github.com/yous/whiteglass). (Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages and Cayman is one of them.)
 
-:rocket: Edit the `_config.yml` file to use whiteglass theme and its plugins by replacing lines 29-31 with the following:
+:rocket: Edit *_config.yml* --> Replace the theme of 'minima' with cayman.
 
-```
-theme: jekyll-whiteglass
-gems:
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
-
-permalink: /:year/:month/:day/:title/
-paginate_path: /posts/:num/
-paginate: 5
-
-jekyll-archives:
-  enabled:
-    - categories
-  layout: category_archives
-  permalinks:
-    category: /categories/:name/
-```
-
-:rocket: Now, replace line 15 of your `Gemfile` with: `gem "jekyll-whiteglass"`
-
-You can see what other plugins exist at https://jekyllrb.com/docs/plugins/#available-plugins
-
-The `whiteglass` theme also comes with some helpful default plugins like an about and an archives page. :rocket: You can add these files to your blog by running:
-```
-rm index.md
-curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"
-curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
-```
-
-:rocket: Because you added gems to `_config.yml` and `Gemfile`, you need to install them by calling `bundle install` in your terminal
+:rocket: Because you added a gem to `_config.yml`, you need to install it by running `bundle install` in your terminal.
 
 :rocket: Now you can see how your new theme looks by running ```bundle exec jekyll serve``` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
