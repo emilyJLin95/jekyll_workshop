@@ -209,8 +209,8 @@ Let's try customizing this theme's layout!
 ## Customize your Theme with a Layout
 Create a directory called `_includes`.
 ```
-mkdir _layouts
-cd _layouts
+mkdir _includes
+cd _includes
 ```
 Then, copy the file in `_includes/footer_content.html` and paste it into your newly-created `_includes` folder.
 Copy and paste the following code to the end of your file:
