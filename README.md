@@ -85,6 +85,29 @@ This is what your site should now look like:
 
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
 
+## What's Happening?
+One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
+
+A popular practice with Jekyll is to _modularize_ your code-- that is, create elements of the page (ex headers, nav bars, footers) that have a predefined style and to include them as separate .html files.
+
+Let's try customizing this theme's layout!
+
+## Making a Layout
+Create a directory called `_includes`.
+```
+mkdir _layouts
+cd _layouts
+```
+Then, copy the file in `_includes/footer_content.html` and paste it into your newly-created `_includes` folder.
+Copy and paste the following code to the end of your file:
+```
+<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
+```
+Check to make sure your page still looks nice :)
+
+This is the same method used to edit the CSS in the site. 
+
+
 ## Workshop Overview
 
 * [10-15 Minute Intro Presentation](#presentation-section)
