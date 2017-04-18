@@ -4,6 +4,9 @@
 
 Still confused? By the end of this workshop you will learn how you can use Jekyll to start a personal blogging website.
 
+## Workshop Overview
+To complete this workshop, follow the following steps:
+1. Getting Started- Install Jekyll (#Getting-started)
 ## Getting started
 
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
