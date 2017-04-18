@@ -27,9 +27,9 @@ Be sure to look out for the following notations:
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
 ### Mac
-1. Your computer probably comes with Ruby installed! You can verify this with which ruby. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the which gem command. If you don't get a path returned, you can download RubyGems here.
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute gem install jekyll bundler. If you didn't install Ruby with homebrew or rbenv, you may have to run sudo gem install jekyll bundler.
+1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem` command. If you don't get a path returned, you can download RubyGems here.
+3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.
 
 #### What does the `bundler` gem do?
 
