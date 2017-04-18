@@ -51,8 +51,8 @@ There's a known issue with Ruby on Windows that makes the installation process a
 
 
 ## Starting a jekyll project
-
-`jekyll new blog`
+:rocket: Now that you have the prerequisites set up, you can start your first jekyll site with the following command.
+`jekyll new blogtitle`
 
 `cd blog`
 
