@@ -99,7 +99,18 @@ As mentioned initially, Jekyll is designed to parse your files so that you can c
 theme: jekyll-theme-cayman
 ```
 
+:rocket: Edit *Gemfile* --> gem "jekyll-theme-cayman" instead of `minima` on line 15
+
 :rocket: Because you added a gem to `Gemfile`, you need to install it by running `bundle install` in your terminal.
+
+:rocket: If you serve the site now, you'll get the following error:
+```
+Liquid Exception: Could not locate the included file 'icon-github.html' in any of ["/Users/byrne/cs52/blogsite/_includes"]
+```
+
+Can you fix this error?
+
+Good job! All you had to do was create the `_includes` directory in `blogsite` and an empty `icon-github.html` file in that folder.
 
 :rocket: Now you can see how your new theme looks by running ```bundle exec jekyll serve``` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
