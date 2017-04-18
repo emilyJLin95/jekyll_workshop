@@ -60,12 +60,21 @@ Now when you enter the directory created for your site with `cd blogtitle` you s
 ![Image](/img/initial-directory.png)
 
 ## Serving your project on a browser
-:rocket: The command `bundle exec jekyll serve` will run your files on `localhost:4000`
-It’s a barebones look right now though- the default `minima` theme
-You can now close the server with `ctrl+c`
+:rocket: You are now ready to serve your initial site using the command
+```bundle exec jekyll serve```
+Your site will now be accessible locally at
+```http://localhost:4000```
+
+You should see something similar to this:
+![Image](/img/default-jekyll.png)
+
+This the default `minima` theme that comes with a new jekyll site.
+You can now close the server with `ctrl+c` and launch it again at any time with `jekyll serve`
+
+:white_check_mark: You have now successfully created your first jekyll site and served it locally!
 
 ## Adding a theme
-Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
+As mentioned initially, Jekyll is designedFeel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
 
 Edit `_config.yml` to use whiteglass theme and its plugins (replace lines 29-31 with the following):
 
