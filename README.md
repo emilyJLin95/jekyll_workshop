@@ -16,11 +16,11 @@ To complete this workshop, follow the following steps:
 7. [Deploy to Github Pages](#deploy-to-github-pages)
 
 Be sure to look out for the following notations:
-:computer: run in terminal
-:rocket: this is a key step
-:warning: watch out!
-:question: explanation section- what is going on here?
-:white_check_mark: checkpoint reached!
+* :computer: run in terminal
+* :rocket: this is a key step
+* :warning: watch out!
+* :question: explanation section- what is going on here?
+* :white_check_mark: checkpoint reached!
 
 ## Getting started
 
@@ -133,13 +133,13 @@ This is the same method used to edit the CSS in the site.
 ## Deploy your site to Github Pages
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
-:white_check_mark: Installed Jekyll and created a new Jekyll site
-:white_check_mark:Installed a theme
-:white_check_mark:Make a blog post using Jekyll
-:white_check_mark:Customized a theme
-:white_check_mark: Deployed your Jekyll site to github-pages
+* :white_check_mark: Installed Jekyll and created a new Jekyll site
+* :white_check_mark:Installed a theme
+* :white_check_mark:Make a blog post using Jekyll
+* :white_check_mark:Customized a theme
+* :white_check_mark: Deployed your Jekyll site to github-pages
 
-:rocket: To turn in the assignment please submit the URL for your deployed site!
+* :rocket: To turn in the assignment please submit the URL for your deployed site!
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
