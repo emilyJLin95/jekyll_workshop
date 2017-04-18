@@ -15,6 +15,13 @@ To complete this workshop, follow the following steps:
 6. [Customize your Theme](#customize-a-theme)
 7. [Deploy to Github Pages](#deploy-to-github-pages)
 
+Be sure to look out for the following notations:
+:computer: run in terminal
+:rocket: this is a key step
+:warning: watch out!
+:question: explanation section- what is going on here?
+:white_check_mark: checkpoint reached!
+
 ## Getting started
 
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
@@ -125,69 +132,22 @@ This is the same method used to edit the CSS in the site.
 
 ## Deploy your site to Github Pages
 ## Final Checklist
-### Potential Extensions
+At this point you should understand how to, and have completed the following:
+:white_check_mark: Installed Jekyll and created a new Jekyll site
+:white_check_mark:Installed a theme
+:white_check_mark:Make a blog post using Jekyll
+:white_check_mark:Customized a theme
+:white_check_mark: Deployed your Jekyll site to github-pages
 
+:rocket: To turn in the assignment please submit the URL for your deployed site!
+
+#### Potential Extensions
+Some potential extensions where you could take this include:
+* :arrow_upper_right: Check out other themes at [Jekyll Themes](http://jekyllthemes.org/) and play around! There are a lot of different themes for various types of sites other than blogs, such as portfolios etc.
+* :arrow_upper_right: Try creating your own 'theme'. The tutorial linked below on Starting Jekyll is a good starting place for this.
+
+We hope that after this workshop you are now confident about how you can use Jekyll in the future!
 ## Sources
-
-## Workshop Overview
-
-* [10-15 Minute Intro Presentation](#presentation-section)
-* [30 Minute Tutorial](#tutorial-section)
-* [5-10 Minute Wrap-Up Discussion](#wrap-up-discussion-section)
-
-## Teams
-
-Teams of ~5 will be formed around dates and a set of potential topics. Your and your team may chose 1 or 2 technologies from the list or may suggest alternative related technologies/topics.
-
-## Setup
-
-If your tutorial requires any lengthy download or install procedures please let the class know at least 2 days in advance.
-
-## Details
-
-
-### Presentation Section
-
-~(10-15 minutes)
-
-* motivate the technology
-* show where the technology fits into the web dev process (dev tool, frontend framework, preprocessor, language etc)
-* show some use cases
-* discuss pros/cons
-
-You may use any presentation technology, although [reveal.js](https://github.com/hakimel/reveal.js) is particularly fitting as an open source javascript library, and supports code blocks. :gem:
-
-### Tutorial Section
-
-(~30 minutes)
-
-Your written tutorial document will be a walkthrough of building something using the specific web technologies.
-
-It should include:
-
-* Overview of what will be attempted
-* Any necessary setup steps
-* Step by step instructions
-* Explanations of the what **and** the why behind each step. Try to include:
-  * higher level concepts
-  * best practices
-
-Remember to explain any notation you are using.
-
-```javascript
-/* and use code blocks for any code! */
-```
-
-Use screenshots
-
-:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
-
-Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Wrap-Up Discussion Section
-
-(~5-10 minutes)
-
-* lead short discussion
-* answer questions
-* individual teams share results
+* [Official Jekyll Documentation](https://jekyllrb.com/docs/quickstart/)
+* [More information on how Jekyll works](https://jekyllbootstrap.com/lessons/jekyll-introduction.html)
+* [Tutorial on Starting Jekyll](https://www.taniarascia.com/make-a-static-website-with-jekyll/)
