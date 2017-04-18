@@ -92,7 +92,7 @@ You can now close the server with `ctrl+c` and launch it again at any time with 
 :white_check_mark: You have now successfully created your first jekyll site and served it locally!
 
 ## Adding a theme
-As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`Cayman` theme](https://github.com/yous/whiteglass). (Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages and Cayman is one of them.)
+As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`Cayman` theme](https://github.com/pages-themes/cayman). (Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages and Cayman is one of them.)
 
 :rocket: Edit *_config.yml* --> Replace the theme of 'minima' with cayman.
 
