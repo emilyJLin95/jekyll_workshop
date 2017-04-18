@@ -1,4 +1,4 @@
-# jekyll Introductory Workshop!
+# Jekyll Introductory Workshop!
 
 [Jekyll](https://jekyllrb.com/) is a static site generator that automates a lot of the site creation progress. It's popular for personal and blogging sites. But don't confuse Jekyll with blogging software- although there are many templates available for use with Jekyll, Jekyll is fundamentally parsing software that makes it easier for you to make your website. Jekyll will interpret what you give it, be it markdown files, layout information etc. and construct your website.
 
@@ -206,9 +206,7 @@ A popular practice with Jekyll is to _modularize_ your code-- that is, create el
 
 Let's try customizing this theme's layout!
 
-## Customize your Theme
-
-#### Making a Layout
+## Customize your Theme with a Layout
 Create a directory called `_includes`.
 ```
 mkdir _layouts
