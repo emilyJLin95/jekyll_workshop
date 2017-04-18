@@ -294,7 +294,7 @@ At this point you should understand how to, and have completed the following:
 :rocket: To turn in the assignment please submit the URL for your repo! In your README, include several screenshots of your blog running locally.
 
 ## Deploying to Github
-One advantage of jekyll is that you can directly  deploy your static site to github pages. However certain themes are incompatible with github pages, including whiteglass, the theme we took you through today.
+One advantage of jekyll is that you can directly  deploy your static site to github pages. However certain themes are incompatible with github pages, including whiteglass, the theme we took you through today. In these cases, you can deploy through alternate methods, such as [paperplane.io](paperplane.io).
 
 To see themes that are compatible with github pages, see here: [Github themes](https://pages.github.com/themes/). If you follow the instructions (making appropriate changes in Gemfile and _config.yml), make sure to run bundle install. Note that after running bundle exec jekyll serve, you'll be missing some files. While you can manually create these files, the github community has blessed us with some easy to use starterpacks. See [Cayman starter pack](https://github.com/pietromenna/jekyll-cayman-theme) to get started on the very customizable framework.
 
