@@ -6,7 +6,15 @@ Still confused? By the end of this workshop you will learn how you can use Jekyl
 
 ## Workshop Overview
 To complete this workshop, follow the following steps:
-1. Getting Started- Install Jekyll (#Getting-started)
+
+1. [Getting Started- Install Jekyll](#getting-started)
+2. [Start a new Jekyll Project](#starting-a-jekyll-project)
+3. [Serve your first project](#serving-your-project-on-a-browser)
+4. [Add a Theme](#adding-a-theme)
+5. [Make your first post](#make-your-first-post)
+6. [Customize your Theme](#customize-a-theme)
+7. [Deploy to Github Pages](#deploy-to-github-pages)
+
 ## Getting started
 
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
@@ -90,6 +98,8 @@ This is what your site should now look like:
 
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
 
+## Make your First Post!
+
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
 
@@ -97,7 +107,8 @@ A popular practice with Jekyll is to _modularize_ your code-- that is, create el
 
 Let's try customizing this theme's layout!
 
-## Making a Layout
+## Customize your Theme
+### Making a Layout
 Create a directory called `_includes`.
 ```
 mkdir _layouts
@@ -112,6 +123,11 @@ Check to make sure your page still looks nice :)
 
 This is the same method used to edit the CSS in the site.
 
+## Deploy your site to Github Pages
+## Final Checklist
+### Potential Extensions
+
+## Sources
 
 ## Workshop Overview
 
