@@ -171,7 +171,12 @@ Check to make sure your page still looks nice :)
 This is the same method used to edit the CSS in the site.
 
 ## Deploy your site to Github Pages
-The final step is to deploy your site to Github Pages.
+The final step is to deploy your site to Github Pages. Fortunately, a great benefit is that Github-Pages works very easily with Jekyll, especially with the `github-pages` gem.
+
+:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line `gem github-pages`. Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
+
+![My Photo]({{ site.url }}/img/github_gem.png "Github gem")
+
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
 * :white_check_mark: Install Jekyll and created a new Jekyll site
