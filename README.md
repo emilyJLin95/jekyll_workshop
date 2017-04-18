@@ -1,4 +1,4 @@
-# jekyll Introductory Workshop!
+# Jekyll Introductory Workshop!
 
 [Jekyll](https://jekyllrb.com/) is a static site generator that automates a lot of the site creation progress. It's popular for personal and blogging sites. But don't confuse Jekyll with blogging software- although there are many templates available for use with Jekyll, Jekyll is fundamentally parsing software that makes it easier for you to make your website. Jekyll will interpret what you give it, be it markdown files, layout information etc. and construct your website.
 
@@ -24,20 +24,28 @@ Be sure to look out for the following notations:
 
 ## Getting started
 
-Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
+Before you start using jekyll, you need to install it first! The instructions for Mac and Windows installation are below.
 
-### Mac
-1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+### Mac :rocket: :computer:
 
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem command`. If you don't get a path returned, you can download RubyGems here.
+By the time you're done with this section, your terminal should look very similar to this one (all `which` does is locate a program file in the user's path; if a path shows up, it's *probably* properly installed):
 
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.
+![](img/which.png)
 
-#### What does the `bundler` gem do?
+1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `ruby -v`. It should return with Ruby version 2.0.0 or higher. (If you plan on doing more serious development with Ruby, you should look into an environment manager, like [rbenv](https://github.com/rbenv/rbenv), but that's beyond the scope of this workshop.)
+If for some reason you’re running a lower version, you can update with:
+```
+sudo gem install ruby
+```
+If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
 
-- Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run:
 
-### Windows
+```
+sudo gem install bundler
+```
+
+### Windows :rocket: :computer:
 There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
 1. Check if you already have Ruby installed. Run your terminal as an administrator (right click when opening and choose, "Run as administrator") and type `ruby -v`
    1. If that gives you a version number, go to step 2!
@@ -60,6 +68,15 @@ There's a known issue with Ruby on Windows that makes the installation process a
 Now when you enter the directory created for your site with `cd blogtitle` you should see a directory structure like this:
 
 ![Image](/img/initial-directory.png)
+
+Here's a brief overview of what each file is for:
+
+- **_config.yml** Stores configuration data.
+- **_includes** This folder is for partial views.
+- **_layouts** This folder is for the main templates your content will be inserted into. You can have different layouts for different pages or page sections.
+- **_posts** This folder contains your dynamic content/posts. the naming format is required to be `@YEAR-MONTH-DATE-title.MARKUP@`.
+-  **_site** This is where the generated site will be placed once Jekyll is done transforming it.
+- **assets** This folder is not part of the standard jekyll structure. The assets folder represents any generic folder you happen to create in your root directory. Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.
 
 ## Serving your project on a browser
 
@@ -180,10 +197,7 @@ The following image should now appear in your blog post:
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Modularization is where certain elements such as a layout or headers/footers have a predefined style.
 
 Jekyll reads this information through the different folders in the directory. For example, the compiled site will be in the `_sites` folders
-:warning: don't put files there, as they'll only be overwritten
-
-Blog posts will be in `_posts`.
-
+(:warning: don't put files there, as they'll only be overwritten). Blog posts will be in the `_posts` directory.
 We will now explore more of what is actually going on inside the directory.
 
 #### The `_config.yml` File: Change your site Title
@@ -335,7 +349,6 @@ At this point you should understand how to, and have completed the following:
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
-* :arrow_upper_right:
 * :arrow_upper_right: Check out other themes at [Jekyll Themes](http://jekyllthemes.org/) and play around! There are a lot of different themes for various types of sites other than blogs, such as portfolios etc.
 * :arrow_upper_right: Try creating your own 'theme'. The tutorial linked below on Starting Jekyll is a good starting place for this.
 
