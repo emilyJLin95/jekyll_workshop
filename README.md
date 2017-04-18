@@ -28,7 +28,7 @@ Before you start using jekyll, you need to install it first! The instructions fo
 
 ### Mac :rocket: :computer:
 
-By the time you're done with this section, your terminal should look very similar to this one (all `which` does is confirm that something is properly installed):
+By the time you're done with this section, your terminal should look very similar to this one (all `which` does is locate a program file in the user's path; if a path shows up, it's *probably* properly installed):
 
 ![](img/which.png)
 
