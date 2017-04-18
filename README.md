@@ -290,7 +290,6 @@ At this point you should understand how to, and have completed the following:
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
-* :arrow_upper_right:
 * :arrow_upper_right: Check out other themes at [Jekyll Themes](http://jekyllthemes.org/) and play around! There are a lot of different themes for various types of sites other than blogs, such as portfolios etc.
 * :arrow_upper_right: Try creating your own 'theme'. The tutorial linked below on Starting Jekyll is a good starting place for this.
 
