@@ -193,8 +193,11 @@ The following image should now appear in your blog post:
 ![checkpoint](img/firstpost-checkpoint.png)
 
 ## Customization
-One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
+### What's Happening? Understanding the Directory Structure of Jekyll themes
+One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Modularization is where certain elements such as a layout or headers/footers have a predefined style.
 
+Jekyll reads this information through the different folders in the directory. For example, the compiled site will be in the `_sites` folders
+(:warning: don't put files there, as they'll only be overwritten). Blog posts will be in the `_posts` directory.
 We will now explore more of what is actually going on inside the directory.
 
 #### The `_config.yml` File: Change your site Title
@@ -218,24 +221,68 @@ The `whiteglass` theme also allows you to control your navigation bar through th
 :white_check_mark: You have now personalized your site with your own title and additions to the navigation bar such as this:
 
 ![Personalization](img/personalization.png)
-A popular practice with Jekyll is to _modularize_ your code-- that is, create elements of the page (ex headers, nav bars, footers) that have a predefined style and to include them as separate .html files.
 
-Let's try customizing this theme's layout!
+### More on directory structure and how theme customization works
+As mentioned above, Jekyll sites utilize modularization where an element such as a footer can be pre-defined as being on every page. The files for this are stored in the `_includes` directory.
 
-#### Customize your Theme with a Layout
-Create a directory called `_includes`.
+#### Using the `_includes` folder to customize header and footer
+The `_includes` folder holds files defining things that should be on every page, such as a header or footer. Let's practice by modifying the footer on our site.
+
+:rocket: Create a directory called `_includes`.
 ```
 mkdir _includes
 cd _includes
 ```
-Then, copy the file in `_includes/footer_content.html` and paste it into your newly-created `_includes` folder.
-Copy and paste the following code to the end of your file:
-```
-<link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
-```
-Check to make sure your page still looks nice :)
+To override/customize our own footer, we are going to copy the `_includes/footer_content.html` file from the jekyll-whiteglass gem folder.
 
-This is the same method used to edit the CSS in the site.
+:rocket: First call
+```bundle show jekyll-whiteglass```
+to get the path to the jekyll-whiteglass gem folder.
+
+![path](img/path.png)
+
+:exclamation: You may notice that in the directory structure of your site that is using the `whiteglass` theme you don't have a `_includes` folder. This is because when we installed the `whiteglass` theme using a `gem`, only the necessary files are in our root directory and you copy and paste the files from the `gem` folder as needed.
+
+:rocket: Follow this path
+```
+cd /Users/Elaine/.rvm/gems/ruby-2.3.1/gems/jekyll-whiteglass-1.3.0/
+```
+and copy `cp` the `_includes/footer_content.html` file into your project's root directory
+
+We can now customize this footer by editing this file. We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
+
+:rocket: To do this, replace {{site.author}} with
+```
+Made at <a href="https://www.dartmouth.edu">Dartmouth College</a>
+```
+:white_check_mark: Now when we run `bundle exec jekyll serve` you should see your modified footer at the bottom:
+![Footer](img/modified-footer.png)
+
+#### Looking at Layouts
+Another aspect of modularization is using the `_layouts` folder to define set layouts.
+
+To learn more about how `_layouts` work, run
+```
+bundle show jekyll-whiteglass
+```
+Then, looking at the `_layouts` folder, compare the `page.html` and `post.html` file. The `post` layout is a blog post- so it prints the date and time of the post. When we made our first blog post earlier, we set the layout to `post`, so Jekyll utilised this `post.html` file to layout the blog post.
+```
+---
+layout: post
+title:  "Hello World"
+date:   2017-04-18 04:16:13 -0400
+categories: jekyll
+---
+```
+In this way, you can define different layouts for use with your site.
+
+### :white_check_mark: Takeaways from Customization
+The strategy we used to modify the footer can be used to customize a theme:
+* We make the relevant Directory within our project directory.
+* The file relevant to what we want to modify, e.g. `footer_content.html` is then copied from the gem folder into our own project directory.
+* Changes are made.
+
+:exclamation::arrow_upper_right: NOTE: This is also how you can create your own theme; by creating your own `_layouts` and `_includes` files.
 
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
