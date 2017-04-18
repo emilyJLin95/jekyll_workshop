@@ -12,8 +12,8 @@ To complete this workshop, follow the following steps:
 3. [Serve your first project](#serving-your-project-on-a-browser)
 4. [Add a Theme](#adding-a-theme)
 5. [Make your first post](#make-your-first-post)
-6. [Customize your Theme](#customize-a-theme)
-7. [Deploy to Github Pages](#deploy-to-github-pages)
+6. [Customize your Theme](#customization)
+7. [Deploy to Github Pages](#pushing-to-github)
 
 Be sure to look out for the following notations:
 * :computer: run in terminal
@@ -193,7 +193,8 @@ The following image should now appear in your blog post:
 :white_check_mark: You have now successfully created a blog post! It should look something along the lines of this:
 ![checkpoint](img/firstpost-checkpoint.png)
 
-## What's Happening? Understanding the Directory Structure of Jekyll themes
+## Customization
+###What's Happening? Understanding the Directory Structure of Jekyll themes
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Modularization is where certain elements such as a layout or headers/footers have a predefined style.
 
 Jekyll reads this information through the different folders in the directory. For example, the compiled site will be in the `_sites` folders
@@ -308,7 +309,8 @@ bundle update
 ```
 You have now bootstrapped an environment that closely mirrors Github-Pages and "Using it in your projects means that when you deploy your site to GitHub Pages, you will not be caught by unexpected differences between various versions of the gems." (Jekyll Official Docs)
 
-#### Pushing to Github (Cited from Tania Rascia tutorial)
+#### Pushing to Github
+(Cited from Tania Rascia tutorial)
 :rocket: Create a new empty repository in your Github account where the URL is:
 ```
 http://github.com/your_username/repo_name
