@@ -239,9 +239,15 @@ To override/customize our own footer, we are going to copy the `_includes/footer
 ```bundle show jekyll-whiteglass```
 to get the path to the jekyll-whiteglass gem folder.
 
-:exclamation: You may notice that in the directory structure of your site that is using the `whiteglass` theme you don't have a `_layouts` folder. This is because when we installed the `whiteglass` theme using a `gem`, only the necessary files are in our root directory and you copy and paste the files from the `gem` folder as needed.
+![path](img/path.png)
 
-:rocket: Follow this path and copy the `_includes/footer_content.html` file into your project's root directory
+:exclamation: You may notice that in the directory structure of your site that is using the `whiteglass` theme you don't have a `_includes` folder. This is because when we installed the `whiteglass` theme using a `gem`, only the necessary files are in our root directory and you copy and paste the files from the `gem` folder as needed.
+
+:rocket: Follow this path
+```
+cd /Users/Elaine/.rvm/gems/ruby-2.3.1/gems/jekyll-whiteglass-1.3.0/
+```
+and copy `cp` the `_includes/footer_content.html` file into your project's root directory
 
 We can now customize this footer by editing this file. We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
 
