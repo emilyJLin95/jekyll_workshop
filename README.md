@@ -115,10 +115,37 @@ YEAR-MONTH-DAY-TITLE.md
 
 For example to create a blog post titled 'hello world' enter the following into terminal:
 ```
-:computer:`touch 2017-04-18-hello-world.md`
+touch 2017-04-18-hello-world.md
 ```
-:rocket: Within you
+:rocket: At the top of this file, add the following lines of code.
+```
+---
+layout: post
+title:  "Hello World"
+date:   2017-04-18 04:16:13 -0400
+categories: jekyll
+---
+```
 
+:question: The content in between the three-dashed lines is known as YAML Front Matter and Jekyll will parse these variables in converting your file into the HTML for your site. For example, the `layout` variable will tell Jekyll to utilize the `post` layout.
+
+:warning: All blog post files must start with this YAML Front Matter!
+
+:rocket: Now, underneath the YAML Front Matter, you can write the content of your Blog Post in Markdown.
+For example, copy the following lines to the bottom of the file:
+```
+
+Hello CS52! So far I have:
+* Installed Jekyll
+* Posted my first blog post
+
+I also can put code snippets in my blog posts such as
+`cd myFolder`
+
+```
+
+
+:white_check_mark: You have now successfullly created a blog post!
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
 
@@ -127,7 +154,8 @@ A popular practice with Jekyll is to _modularize_ your code-- that is, create el
 Let's try customizing this theme's layout!
 
 ## Customize your Theme
-### Making a Layout
+####
+#### Making a Layout
 Create a directory called `_includes`.
 ```
 mkdir _layouts
@@ -160,6 +188,7 @@ Some potential extensions where you could take this include:
 * :arrow_upper_right: Try creating your own 'theme'. The tutorial linked below on Starting Jekyll is a good starting place for this.
 
 We hope that after this workshop you are now confident about how you can use Jekyll in the future!
+
 ## Sources
 * [Official Jekyll Documentation](https://jekyllrb.com/docs/quickstart/)
 * [More information on how Jekyll works](https://jekyllbootstrap.com/lessons/jekyll-introduction.html)
