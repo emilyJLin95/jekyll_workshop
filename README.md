@@ -27,9 +27,11 @@ Be sure to look out for the following notations:
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
 ### Mac
-1. Your computer probably comes with Ruby installed! You can verify this with which ruby. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the which gem command. If you don't get a path returned, you can download RubyGems here.
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute gem install jekyll bundler. If you didn't install Ruby with homebrew or rbenv, you may have to run sudo gem install jekyll bundler.
+1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem command`. If you don't get a path returned, you can download RubyGems here.
+
+3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.
 
 #### What does the `bundler` gem do?
 
@@ -61,13 +63,13 @@ Now when you enter the directory created for your site with `cd blogtitle` you s
 
 ## Serving your project on a browser
 :rocket: The command `bundle exec jekyll serve` will run your files on `localhost:4000`
-It’s a barebones look right now though- the default `minima` theme
+It’s a barebones look right now though - the default `minima` theme
 You can now close the server with `ctrl+c`
 
 ## Adding a theme
 Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
 
-Edit `_config.yml` to use whiteglass theme and its plugins (replace lines 29-31 with the following):
+Edit `_config.yml` to use the whiteglass theme and its plugins (replace lines 29-31 with the following):
 
 
 ```
@@ -100,7 +102,7 @@ curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,a
 curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
 ```
 
-Because you added gems to `_config.yml` and `Gemfile`, you need to install them with `bundle install`
+Because you added gems to `_config.yml` and `Gemfile`, you need to install them by running `bundle install`
 
 Now you can simply run `bundle exec jekyll serve` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
 
@@ -146,12 +148,18 @@ I also can put code snippets in my blog posts such as
 `cd myFolder`
 
 ```
+
+Run `bundle exec jekyll serve` from the top level directory. Your home page should now look like this.
+
+![Alt text](./img/added_post.png)
+
+
 :rocket: To add a picture to your post, you can use Markdown syntax for adding an image:
 ```
 ![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
-
 ```
 The following image should now appear in your blog post:
+
 ![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
 
 
