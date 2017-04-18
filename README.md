@@ -332,7 +332,7 @@ git remote add origin http://github.com/your_username/repo_name.git
 ```
 :rocket: We then push to the `gh-pages` branch of our repository as follows:
 ```
-git checkout -b github-pages
+git checkout -b gh-pages
 git add .
 git commit -m "deploy site"
 git push -u origin gh-pages
