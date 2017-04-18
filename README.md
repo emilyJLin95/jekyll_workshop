@@ -27,9 +27,11 @@ Be sure to look out for the following notations:
 Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
 
 ### Mac
-1. Your computer probably comes with Ruby installed! You can verify this with which ruby. If you don't get a path returned, you can easily install ruby with Homebrew. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the which gem command. If you don't get a path returned, you can download RubyGems here.
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute gem install jekyll bundler. If you didn't install Ruby with homebrew or rbenv, you may have to run sudo gem install jekyll bundler.
+1. Your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running the `which gem command`. If you don't get a path returned, you can download RubyGems here.
+
+3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.
 
 #### What does the `bundler` gem do?
 
@@ -60,12 +62,11 @@ Now when you enter the directory created for your site with `cd blogtitle` you s
 ![Image](/img/initial-directory.png)
 
 ## Serving your project on a browser
-:rocket: You are now ready to serve your initial site using the command
-```bundle exec jekyll serve```
-Your site will now be accessible locally at
-```http://localhost:4000```
+
+:rocket: You are now ready to serve your initial site using the command `bundle exec jekyll serve` Your site will now be accessible locally at `http://localhost:4000`
 
 You should see something similar to this:
+
 ![Image](/img/default-jekyll.png)
 
 This the default `minima` theme that comes with a new jekyll site.
@@ -77,7 +78,6 @@ You can now close the server with `ctrl+c` and launch it again at any time with 
 As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass).
 
 :rocket: Edit the `_config.yml` file to use whiteglass theme and its plugins by replacing lines 29-31 with the following:
-
 
 ```
 theme: jekyll-whiteglass
@@ -157,12 +157,19 @@ I also can put code snippets in my blog posts such as
 `cd myFolder`
 
 ```
+
+Your home page should now look like this.
+
+![Alt text](./img/added_post.png)
+
+
 :rocket: To add a picture to your post, you can use Markdown syntax for adding an image:
-```
-![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
 
 ```
+![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
+```
 The following image should now appear in your blog post:
+
 ![Image of Cat](https://img.youtube.com/vi/nPER_vv2SyU/hqdefault.jpg)
 
 
@@ -200,7 +207,7 @@ A popular practice with Jekyll is to _modularize_ your code-- that is, create el
 Let's try customizing this theme's layout!
 
 ## Customize your Theme
-####
+
 #### Making a Layout
 Create a directory called `_includes`.
 ```
