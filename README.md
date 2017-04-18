@@ -294,7 +294,7 @@ The final step is to deploy your site to Github Pages. Fortunately, a great bene
 gem github-pages
 ```
 
-Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
+Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages` in line 19.
 
 ![My Photo](./img/github-gem.png "Github gem")
 
