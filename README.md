@@ -172,6 +172,29 @@ The following image should now appear in your blog post:
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
 
+We will now explore more of what is actually going on inside the directory.
+
+#### The `_config.yml` File: Change your site Title
+The `_config.yml` file holds settings that affect your whole blog that are typically set once initially. For example this is where you set your Site Title and Tile Description.
+
+:rocket: Edit the `title` and `description` variables of the `_config.yml` file to personalize your website.
+
+```
+title: My First Blog Title
+email: mypersonalemail@dartmouth.edu
+description: This is my first website on Jekyll!
+```
+#### Updating the Navigation Bar
+The `whiteglass` theme also allows you to control your navigation bar through the `navigation.yml` file in the `_data` directory.
+
+:rocket: Add a Link to the CS52 website onto your Navigation Bar by adding the following lines to the `navigation.yml` file:
+```
+  -title: "CS52"
+    url:  https://cs52.me
+```
+:white_check_mark: You have now personalized your site with your own title and additions to the navigation bar such as this:
+
+![Personalization](img/personalization.png)
 A popular practice with Jekyll is to _modularize_ your code-- that is, create elements of the page (ex headers, nav bars, footers) that have a predefined style and to include them as separate .html files.
 
 Let's try customizing this theme's layout!
@@ -262,6 +285,7 @@ At this point you should understand how to, and have completed the following:
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
+* :arrow_upper_right:
 * :arrow_upper_right: Check out other themes at [Jekyll Themes](http://jekyllthemes.org/) and play around! There are a lot of different themes for various types of sites other than blogs, such as portfolios etc.
 * :arrow_upper_right: Try creating your own 'theme'. The tutorial linked below on Starting Jekyll is a good starting place for this.
 
