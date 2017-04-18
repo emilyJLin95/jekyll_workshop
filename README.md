@@ -1,6 +1,8 @@
-# jekyll Workshop!
+# jekyll Introductory Workshop!
 
-[Jekyll](https://jekyllrb.com/) is a static site generator that automates a lot of the site creation progress. It's popular for personal and blogging sites.
+[Jekyll](https://jekyllrb.com/) is a static site generator that automates a lot of the site creation progress. It's popular for personal and blogging sites. But don't confuse Jekyll with blogging software- although there are many templates available for use with Jekyll, Jekyll is fundamentally parsing software that makes it easier for you to make your website. Jekyll will interpret what you give it, be it markdown files, layout information etc. and construct your website.
+
+Still confused? By the end of this workshop you will learn how you can use Jekyll to start a personal blogging website.
 
 ## Getting started
 
@@ -105,7 +107,7 @@ Copy and paste the following code to the end of your file:
 ```
 Check to make sure your page still looks nice :)
 
-This is the same method used to edit the CSS in the site. 
+This is the same method used to edit the CSS in the site.
 
 
 ## Workshop Overview
