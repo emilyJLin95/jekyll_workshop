@@ -106,9 +106,18 @@ This is what your site should now look like:
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
 
 ## Make your First Post!
-Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.
+Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.All of your posts will live in the folder `_posts`.
 
-All of your posts live in the folder `_posts`
+:rocket: To create a new post, make a new Markdown file within the `_posts` folder with the following format for the file name:
+```
+YEAR-MONTH-DAY-TITLE.md
+```
+
+For example to create a blog post titled 'hello world' enter the following into terminal:
+```
+:computer:`touch 2017-04-18-hello-world.md`
+```
+:rocket: Within you
 
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
