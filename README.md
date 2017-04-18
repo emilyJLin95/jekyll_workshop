@@ -171,12 +171,58 @@ Check to make sure your page still looks nice :)
 This is the same method used to edit the CSS in the site.
 
 ## Deploy your site to Github Pages
+####Installing the Github-Pages gem
 The final step is to deploy your site to Github Pages. Fortunately, a great benefit is that Github-Pages works very easily with Jekyll, especially with the `github-pages` gem.
 
-:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line `gem github-pages`. Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
+:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line `gem github-pages`.
 
-![My Photo]({{ site.url }}/img/github_gem.png "Github gem")
+Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
 
+![My Photo](./img/github-gem.png "Github gem")
+
+:rocket: Then, run
+```
+bundle install
+```
+followed by
+```
+bundle update
+```
+You have now bootstrapped an environment that closely mirrors Github-Pages and "Using it in your projects means that when you deploy your site to GitHub Pages, you will not be caught by unexpected differences between various versions of the gems." (Jekyll Official Docs)
+
+#### Pushing to Github (Cited from Tania Rascia tutorial)
+:rocket: Create a new empty repository in your Github account where the URL is:
+```
+http://github.com/your_username/repo_name
+```
+:rocket: Create a copy of the `_config.yml` file and name it `_config_dev.yml`.
+
+:rocket: Then, modify the `baseurl` and `url` variables in the `_config.yml` file such that they are:
+
+```
+baseurl: "/repo_name"
+url:"http://github.com/your_username"
+```
+:exclamation: To continue to serve your site locally, you should use the following:
+```
+jekyll serve --config _config_dev.yml
+```
+
+:rocket: Then, as we have done previously, we link our local repo to the github repo using
+```
+git remote add origin http://github.com/your_username/repo_name.git
+```
+:rocket: We then push to the `gh-pages` branch of our repository as follows:
+```
+git checkout -b github-pages
+git add .
+git commit -m "deploy site"
+git push -u origin gh-pages
+```
+:white_check_mark: You have now successfully deployed your site to github-pages and should be able to access it at
+```
+http://github.com/your_username/repo_name
+```
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
 * :white_check_mark: Install Jekyll and created a new Jekyll site
