@@ -244,7 +244,7 @@ At this point you should understand how to, and have completed the following:
 * :white_check_mark:Make a blog post using Jekyll
 * :white_check_mark:Customize a theme
 
-:rocket: To turn in the assignment please submit the URL for your deployed site!
+:rocket: To turn in the assignment please submit the URL for your repo! In your README, include several screenshots of your blog running locally.
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
