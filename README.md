@@ -106,6 +106,9 @@ This is what your site should now look like:
 ![Alt text](./img/basic_whiteglass.png "Optional Title")
 
 ## Make your First Post!
+Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.
+
+All of your posts live in the folder `_posts`
 
 ## What's Happening?
 One of the best parts of using Jekyll is the ability to modularize your page layouts and your posts. Jekyll knows how to read that by the different folders in the directory. For example, the compiled site will be in the `_sites` folders (don't put files there, as they'll only be overwritten). Blog posts will be in `_posts`.
@@ -131,15 +134,16 @@ Check to make sure your page still looks nice :)
 This is the same method used to edit the CSS in the site.
 
 ## Deploy your site to Github Pages
+The final step is to deploy your site to Github Pages.
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
-* :white_check_mark: Installed Jekyll and created a new Jekyll site
-* :white_check_mark:Installed a theme
+* :white_check_mark: Install Jekyll and created a new Jekyll site
+* :white_check_mark:Install a theme
 * :white_check_mark:Make a blog post using Jekyll
-* :white_check_mark:Customized a theme
+* :white_check_mark:Customize a theme
 * :white_check_mark: Deployed your Jekyll site to github-pages
 
-* :rocket: To turn in the assignment please submit the URL for your deployed site!
+:rocket: To turn in the assignment please submit the URL for your deployed site!
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
