@@ -13,7 +13,6 @@ To complete this workshop, follow the following steps:
 4. [Add a Theme](#adding-a-theme)
 5. [Make your first post](#make-your-first-post)
 6. [Customize your Theme](#customize-a-theme)
-7. [Deploy to Github Pages](#deploy-to-github-pages)
 
 Be sure to look out for the following notations:
 * :computer: run in terminal
@@ -237,30 +236,6 @@ Copy and paste the following code to the end of your file:
 Check to make sure your page still looks nice :)
 
 This is the same method used to edit the CSS in the site.
-
-## Deploy your site to Github Pages
-
-#### Installing the Github-Pages gem
-The final step is to deploy your site to Github Pages. Fortunately, a great benefit is that Github-Pages works very easily with Jekyll, especially with the `github-pages` gem.
-
-:rocket: Open up the file named `Gemfile`in the project's root directory. Add the line
-```
-gem github-pages
-```
-
-Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment `gem github-pages`.
-
-![My Photo](./img/github-gem.png "Github gem")
-
-:rocket: Then, run
-```
-bundle install
-```
-followed by
-```
-bundle update
-```
-You have now bootstrapped an environment that closely mirrors Github-Pages and "Using it in your projects means that when you deploy your site to GitHub Pages, you will not be caught by unexpected differences between various versions of the gems." (Jekyll Official Docs)
 
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
