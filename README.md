@@ -24,7 +24,7 @@ Be sure to look out for the following notations:
 
 ## Getting started
 
-Before you start using jekyll, you need to install it first! The instructions for mac and windows installation are below.
+Before you start using jekyll, you need to install it first! The instructions for Mac and Windows installation are below.
 
 ### Mac :rocket: :computer:
 
@@ -32,17 +32,20 @@ By the time you're done with this section, your terminal should look very simila
 
 ![](img/which.png)
 
-1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `which ruby`. If you don't get a path returned, you can easily install ruby with Homebrew. Type `brew install ruby`in the terminal. If you plan on doing more serious development with Ruby, you should look into an environment manager, like rbenv, but that's beyond the scope of this workshop.
+1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `ruby -v`. It should return with Ruby version 2.0.0 or higher. (If you plan on doing more serious development with Ruby, you should look into an environment manager, like [rbenv](https://github.com/rbenv/rbenv), but that's beyond the scope of this workshop.)
+If for some reason you’re running a lower version, you can update with:
+```
+sudo gem install ruby
+```
+If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
 
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. If you installed Ruby with Homebrew or an environment manager, RubyGems should be installed by default. Check if you have gems installed by running `which gem`. If you don't get a path returned, you can download RubyGems [here](https://rubygems.org/pages/download/).
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run:
 
-3. Last step: it's time to install some gems specific to Jekyll. To do this, simple execute `gem install jekyll bundler`. (If you didn't install Ruby with homebrew or rbenv, you may have to run `sudo gem install jekyll bundler`.)
+```
+sudo gem install bundler
+```
 
-#### What does the `bundler` gem do?
-
-- Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
-
-### Windows
+### Windows :rocket: :computer:
 There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
 1. Check if you already have Ruby installed. Run your terminal as an administrator (right click when opening and choose, "Run as administrator") and type `ruby -v`
    1. If that gives you a version number, go to step 2!
