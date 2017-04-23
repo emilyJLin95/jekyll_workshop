@@ -242,7 +242,7 @@ to get the path to the jekyll-whiteglass gem folder.
 
 The command will look a something like this (if you've cd'd into the pathway)
 
-`cp _includes/footer_content.html [your pathway]`
+`cp _includes/footer_content.html [pathway to your blogtitle/_includes directory]`
 
 We can now customize this footer by editing this file. We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
 
