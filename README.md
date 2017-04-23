@@ -33,16 +33,13 @@ By the time you're done with this section, your terminal should look very simila
 
 1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `ruby -v`. It should return with Ruby version 2.0.0 or higher. (If you plan on doing more serious development with Ruby, you should look into an environment manager, like [rbenv](https://github.com/rbenv/rbenv), but that's beyond the scope of this workshop.)
 If for some reason you’re running a lower version, you can update with:
-```
-sudo gem install ruby
-```
-If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
+`sudo gem install ruby`
 
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run:
+  If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
 
-```
-sudo gem install bundler
-```
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run: `sudo gem install bundler`
+
+3. And finally a simple `gem install jekyll`
 
 ### Windows :rocket: :computer:
 There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
@@ -64,9 +61,7 @@ There's a known issue with Ruby on Windows that makes the installation process a
 
 ```jekyll new blogtitle```
 
-Now when you enter the directory created for your site with `cd blogtitle` you should see a directory structure like this:
-
-![Image](/img/initial-directory.png)
+Now when you enter the directory created for your site with `cd blogtitle` you should see a few files already in the directory!
 
 Here's a brief overview of what each file is for:
 
@@ -174,7 +169,7 @@ I also can put code snippets in my blog posts such as
 
 ```
 
-Your home page should now look like this.
+You can now see what your home page looks like if you run `jekyll serve` from the parent directory (so cd out of _posts!). It should look a little like this
 
 ![Alt text](./img/added_post.png)
 
@@ -215,7 +210,7 @@ The `whiteglass` theme also allows you to control your navigation bar through th
 
 :rocket: Add a Link to the CS52 website onto your Navigation Bar by adding the following lines to the `navigation.yml` file:
 ```
-  -title: "CS52"
+  - title: "CS52"
     url:  https://cs52.me
 ```
 :white_check_mark: You have now personalized your site with your own title and additions to the navigation bar such as this:
@@ -243,28 +238,27 @@ to get the path to the jekyll-whiteglass gem folder.
 
 :exclamation: You may notice that in the directory structure of your site that is using the `whiteglass` theme you don't have a `_includes` folder. This is because when we installed the `whiteglass` theme using a `gem`, only the necessary files are in our root directory and you copy and paste the files from the `gem` folder as needed.
 
-:rocket: Follow this path
-```
-cd /Users/Elaine/.rvm/gems/ruby-2.3.1/gems/jekyll-whiteglass-1.3.0/
-```
-and copy `cp` the `_includes/footer_content.html` file into your project's root directory
+:rocket: cd into the pathway you just generated and then copy  _includes/footer_content.html file into your project's _includes directory
+
+The command will look a something like this (if you've cd'd into the pathway)
+
+`cp _includes/footer_content.html [your pathway]`
 
 We can now customize this footer by editing this file. We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
 
-:rocket: To do this, replace {{site.author}} with
+:rocket: To do this, replace the text starting with 'Powered by' after {{site.author}} with
 ```
 Made at <a href="https://www.dartmouth.edu">Dartmouth College</a>
 ```
 :white_check_mark: Now when we run `bundle exec jekyll serve` you should see your modified footer at the bottom:
+
 ![Footer](img/modified-footer.png)
 
 #### Looking at Layouts
 Another aspect of modularization is using the `_layouts` folder to define set layouts.
 
-To learn more about how `_layouts` work, run
-```
-bundle show jekyll-whiteglass
-```
+To learn more about how `_layouts` work, take a look at the _layouts folder in that pathway we generated earlier. Forgot it? Just run `bundle show jekyll-whiteglass`.
+
 Then, looking at the `_layouts` folder, compare the `page.html` and `post.html` file. The `post` layout is a blog post- so it prints the date and time of the post. When we made our first blog post earlier, we set the layout to `post`, so Jekyll utilised this `post.html` file to layout the blog post.
 ```
 ---
@@ -310,4 +304,3 @@ We hope that after this workshop you are now confident about how you can use Jek
 ## Sources
 * [Official Jekyll Documentation](https://jekyllrb.com/docs/quickstart/)
 * [More information on how Jekyll works](https://jekyllbootstrap.com/lessons/jekyll-introduction.html)
-* [Tutorial on Starting Jekyll](https://www.taniarascia.com/make-a-static-website-with-jekyll/)
