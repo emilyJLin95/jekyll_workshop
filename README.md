@@ -33,16 +33,13 @@ By the time you're done with this section, your terminal should look very simila
 
 1. Jekyll is a parsing engine bundled as a ruby gem, so you definitely need Ruby to get started. Thankfully, your computer probably comes with Ruby installed! You can verify this with `ruby -v`. It should return with Ruby version 2.0.0 or higher. (If you plan on doing more serious development with Ruby, you should look into an environment manager, like [rbenv](https://github.com/rbenv/rbenv), but that's beyond the scope of this workshop.)
 If for some reason you’re running a lower version, you can update with:
-```
-sudo gem install ruby
-```
-If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
+`sudo gem install ruby`
 
-2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run:
+  If for some reason this command doesn't work, run `which gem`. If a path is not returned, download RubyGems [here](https://rubygems.org/pages/download/) and then try to update Ruby.
 
-```
-sudo gem install bundler
-```
+2. Now you need to be able to install "gems", which are Ruby packages. RubyGems is the Ruby standard for publishing and managing third party libraries. You should have it installed by now. You can use it to install `bundler`, a package manager that will help you install all the Jekyll dependencies. Run: `sudo gem install bundler`
+
+3. And finally a simple `gem install jekyll`
 
 ### Windows :rocket: :computer:
 There's a known issue with Ruby on Windows that makes the installation process a little more difficult for first-time users. However, once RubyGems is installed correctly the first time, RubyGems will work just fine. More info can be found [here](http://guides.rubygems.org/ssl-certificate-update/#installing-using-update-packages).
@@ -134,7 +131,7 @@ I also can put code snippets in my blog posts such as
 
 ```
 
-Your home page should now look like this.
+You can now see what your home page looks like if you run `jekyll serve` from the parent directory (so cd out of _posts!). It should look a little like this
 
 ![Alt text](./img/2.PNG)
 
@@ -290,4 +287,3 @@ We hope that after this workshop you are now confident about how you can use Jek
 ## Sources
 * [Official Jekyll Documentation](https://jekyllrb.com/docs/quickstart/)
 * [More information on how Jekyll works](https://jekyllbootstrap.com/lessons/jekyll-introduction.html)
-* [Tutorial on Starting Jekyll](https://www.taniarascia.com/make-a-static-website-with-jekyll/)
