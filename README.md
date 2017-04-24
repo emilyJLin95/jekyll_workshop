@@ -131,7 +131,7 @@ I also can put code snippets in my blog posts such as
 
 ```
 
-You can now see what your home page looks like if you run `jekyll serve` from the parent directory (so cd out of _posts!). It should look a little like this
+You can now see what your home page looks like if you run `jekyll serve` from the parent directory (so cd out of `_posts!`). It should look a little like this
 
 ![Alt text](./img/2.PNG)
 
