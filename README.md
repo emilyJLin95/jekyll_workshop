@@ -60,13 +60,16 @@ There's a known issue with Ruby on Windows that makes the installation process a
 
 
 ## Starting a jekyll project
-:rocket: Now that you have the prerequisites set up, you can start your first jekyll site with the following command.
+:rocket: Now that you have the prerequisites set up, let's download our first theme.
+1. Go to [this link](http://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip) and download the zip file for the Cayman theme. Cayman is pretty popular, and it works with Github-pages pretty well--notice anything familiar?
 
-```jekyll new blogtitle```
+2. Unzip the folder.
+:warning: When you unzip the folder, make sure to put it somewhere where you'll remember it. This will be where your project lives!
 
-Now when you enter the directory created for your site with `cd blogtitle` you should see a directory structure like this:
+3. Then, `cd` into where all the files are. This might take 1 or 2 `cd`s depending on the unzip.
 
-![Image](/img/initial-directory.png)
+4. `bundle install` will install all the gems you need for the project.
+:warning: If you run into errors while running `bundle install`, (aka non-mac people), you might need to run your terminal as an administrator.
 
 Here's a brief overview of what each file is for:
 
@@ -83,60 +86,17 @@ Here's a brief overview of what each file is for:
 
 You should see something similar to this:
 
-![Image](/img/default-jekyll.png)
+![Image](/img/1.PNG)
 
-This the default `minima` theme that comes with a new jekyll site.
 You can now close the server with `ctrl+c` and launch it again at any time with `jekyll serve`
 
 :white_check_mark: You have now successfully created your first jekyll site and served it locally!
 
-## Adding a theme
-As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer than `minima`. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`whiteglass` theme](https://github.com/yous/whiteglass). Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages, so we will not be deploying this blog to GitHub pages. If you want to very easily deploy to GitHub pages, use the [Jekyll theme chooser](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/).
-
-:rocket: Edit the `_config.yml` file to use whiteglass theme and its plugins by replacing lines 29-31 with the following:
-
-```
-theme: jekyll-whiteglass
-gems:
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
-
-permalink: /:year/:month/:day/:title/
-paginate_path: /posts/:num/
-paginate: 5
-
-jekyll-archives:
-  enabled:
-    - categories
-  layout: category_archives
-  permalinks:
-    category: /categories/:name/
-```
-
-:rocket: Now, replace line 15 of your `Gemfile` with: `gem "jekyll-whiteglass"`
-
-You can see what other plugins exist at https://jekyllrb.com/docs/plugins/#available-plugins
-
-The `whiteglass` theme also comes with some helpful default plugins like an about and an archives page. :rocket: You can add these files to your blog by running:
-```
-rm index.md
-curl -L -O "https://github.com/yous/whiteglass/raw/master/{index.html,about.md,archives.md,feed.xml}"
-curl -L --create-dirs -o _data/navigation.yml https://github.com/yous/whiteglass/raw/master/_data/navigation.yml
-```
-
-:rocket: Because you added gems to `_config.yml` and `Gemfile`, you need to install them by calling `bundle install` in your terminal
-
-:rocket: Now you can see how your new theme looks by running ```bundle exec jekyll serve``` and the blog will be available at [http://127.0.0.1:4000](http://127.0.0.1:4000)
-
-This is what your site should now look like:
-
-![Alt text](./img/basic_whiteglass.png "Optional Title")
-
-:white_check_mark: You have now upgraded the theme on your Jekyll site!
+## Changing themes
+As mentioned initially, Jekyll is designed to parse your files so that you can create your website easily. However, there are many themes available that you can use to easily make your site look a little nicer. Feel free to use choose your own theme from [JekyllThemes.org](http://jekyllthemes.org/), but we’ll be walking you through how to use the [`cayman` theme](https://github.com/pietromenna/jekyll-cayman-theme). Only [a few themes](https://pages.github.com/themes/) are fully supported by GitHub pages... Cayman does though. If you want to very easily deploy to GitHub pages, use the [Jekyll theme chooser](https://help.github.com/articles/creating-a-github-pages-site-with-the-jekyll-theme-chooser/) if/when you change the theme.
 
 ## Make your First Post!
-Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer.All of your posts will live in the folder `_posts`.
+Now that your site is looking a little more aesthetically pleasing, let's make your first blog post. With Jekyll, you can maintain/publish a blog post simply by managing a folder of files on your computer. All of your posts will live in the folder `_posts`.
 
 :rocket: To create a new post, make a new Markdown file within the `_posts` folder with the following format for the file name:
 ```
@@ -176,7 +136,7 @@ I also can put code snippets in my blog posts such as
 
 Your home page should now look like this.
 
-![Alt text](./img/added_post.png)
+![Alt text](./img/2.PNG)
 
 
 :rocket: To add a picture to your post, you can use Markdown syntax for adding an image:
@@ -190,7 +150,7 @@ The following image should now appear in your blog post:
 
 
 :white_check_mark: You have now successfully created a blog post! It should look something along the lines of this:
-![checkpoint](img/firstpost-checkpoint.png)
+![checkpoint](img/3.PNG)
 
 ## Customization
 ### What's Happening? Understanding the Directory Structure of Jekyll themes
@@ -208,19 +168,18 @@ The `_config.yml` file holds settings that affect your whole blog that are typic
 ```
 title: My First Blog Title
 email: mypersonalemail@dartmouth.edu
-description: This is my first website on Jekyll!
+tagline: This is my first website on Jekyll!
 ```
 #### Updating the Navigation Bar
-The `whiteglass` theme also allows you to control your navigation bar through the `navigation.yml` file in the `_data` directory.
+The `Cayman` theme also allows you to control your navigation bar through the `page-header.html` file in the `_includes` directory.
 
-:rocket: Add a Link to the CS52 website onto your Navigation Bar by adding the following lines to the `navigation.yml` file:
+:rocket: Add a Link to the CS52 website onto your Navigation Bar by adding the following lines to the `page-header` file:
 ```
-  -title: "CS52"
-    url:  https://cs52.me
+<a href="https://cs52.me" class="btn">CS52</a>
 ```
 :white_check_mark: You have now personalized your site with your own title and additions to the navigation bar such as this:
 
-![Personalization](img/personalization.png)
+![Personalization](img/4.PNG)
 
 ### More on directory structure and how theme customization works
 As mentioned above, Jekyll sites utilize modularization where an element such as a footer can be pre-defined as being on every page. The files for this are stored in the `_includes` directory.
@@ -228,44 +187,20 @@ As mentioned above, Jekyll sites utilize modularization where an element such as
 #### Using the `_includes` folder to customize header and footer
 The `_includes` folder holds files defining things that should be on every page, such as a header or footer. Let's practice by modifying the footer on our site.
 
-:rocket: Create a directory called `_includes`.
+To override/customize our own footer, we are going to edit the `page-footer.html` file in the `_includes` directory.
+We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
+
+:rocket: To do this, replace line 2 with
 ```
-mkdir _includes
-cd _includes
-```
-To override/customize our own footer, we are going to copy the `_includes/footer_content.html` file from the jekyll-whiteglass gem folder.
-
-:rocket: First call
-```bundle show jekyll-whiteglass```
-to get the path to the jekyll-whiteglass gem folder.
-
-![path](img/path.png)
-
-:exclamation: You may notice that in the directory structure of your site that is using the `whiteglass` theme you don't have a `_includes` folder. This is because when we installed the `whiteglass` theme using a `gem`, only the necessary files are in our root directory and you copy and paste the files from the `gem` folder as needed.
-
-:rocket: Follow this path
-```
-cd /Users/Elaine/.rvm/gems/ruby-2.3.1/gems/jekyll-whiteglass-1.3.0/
-```
-and copy `cp` the `_includes/footer_content.html` file into your project's root directory
-
-We can now customize this footer by editing this file. We want to add some text saying this website was made at Dartmouth College, linking to the Dartmouth Website.
-
-:rocket: To do this, replace {{site.author}} with
-```
-Made at <a href="https://www.dartmouth.edu">Dartmouth College</a>
+<span class="site-footer-owner">Made at <a href="https://www.dartmouth.edu">Dartmouth College</a></a>.</span>
 ```
 :white_check_mark: Now when we run `bundle exec jekyll serve` you should see your modified footer at the bottom:
-![Footer](img/modified-footer.png)
+![Footer](img/5.PNG)
 
 #### Looking at Layouts
 Another aspect of modularization is using the `_layouts` folder to define set layouts.
 
-To learn more about how `_layouts` work, run
-```
-bundle show jekyll-whiteglass
-```
-Then, looking at the `_layouts` folder, compare the `page.html` and `post.html` file. The `post` layout is a blog post- so it prints the date and time of the post. When we made our first blog post earlier, we set the layout to `post`, so Jekyll utilised this `post.html` file to layout the blog post.
+To learn more about how `_layouts` work, look at the `_layouts` folder, compare the `page.html` and `post.html` file. The `post` layout is a blog post- so it prints the date and time of the post. When we made our first blog post earlier, we set the layout to `post`, so Jekyll utilised this `post.html` file to layout the blog post.
 ```
 ---
 layout: post
@@ -278,27 +213,72 @@ In this way, you can define different layouts for use with your site.
 
 ### :white_check_mark: Takeaways from Customization
 The strategy we used to modify the footer can be used to customize a theme:
-* We make the relevant Directory within our project directory.
-* The file relevant to what we want to modify, e.g. `footer_content.html` is then copied from the gem folder into our own project directory.
+* We either open or make the relevant Directory within our project directory.
+* EITHER The file relevant to what we want to modify, e.g. `footer_content.html` is then copied from the gem folder into our own project directory OR we modify the existing theme's file.
 * Changes are made.
 
 :exclamation::arrow_upper_right: NOTE: This is also how you can create your own theme; by creating your own `_layouts` and `_includes` files.
 
+## Deploying to Github
+
+Installing the Github-Pages gem
+
+The final step is to deploy your site to Github Pages. Fortunately, a great benefit is that Github-Pages works very easily with Jekyll, especially with the github-pages gem.
+
+:rocket: Open up the file named `Gemfile` in the project's root directory. Add the line
+
+`gem github-pages`
+Your `Gemfile` may have something similar to this following screenshot; follow the instructions and uncomment gem github-pages in line 19.
+
+My Photo
+
+:rocket: Then, run
+
+`bundle install`
+followed by
+
+`bundle update`
+You have now bootstrapped an environment that closely mirrors Github-Pages and "Using it in your projects means that when you deploy your site to GitHub Pages, you will not be caught by unexpected differences between various versions of the gems." (Jekyll Official Docs)
+
+Pushing to Github
+
+(Cited from Tania Rascia tutorial) :rocket: Create a new empty repository in your Github account where the URL is:
+
+http://github.com/your_username/repo_name
+:rocket: Create a copy of the `_config.yml` file and name it `_config_dev.yml`.
+
+:rocket: Then, modify the baseurl and url variables in the `_config.yml` file such that they are:
+
+```
+baseurl: "/repo_name"
+url:"http://github.com/your_username"
+```
+:exclamation: To continue to serve your site locally, you should use the following:
+
+`jekyll serve --config _config_dev.yml`
+:rocket: Then, as we have done previously, we link our local repo to the github repo using
+
+git remote add origin http://github.com/your_username/repo_name.git
+:rocket: We then push to the gh-pages branch of our repository as follows:
+```
+git checkout -b gh-pages
+git add .
+git commit -m "deploy site"
+git push -u origin gh-pages
+```
+:white_check_mark: You have now successfully deployed your site to github-pages and should be able to access it at
+
+`http://github.com/your_username/repo_name`
+
+
 ## Final Checklist
 At this point you should understand how to, and have completed the following:
 * :white_check_mark: Install Jekyll and created a new Jekyll site
-* :white_check_mark:Install a theme
-* :white_check_mark:Make a blog post using Jekyll
-* :white_check_mark:Customize a theme
+* :white_check_mark: Install a theme
+* :white_check_mark: Make a blog post using Jekyll
+* :white_check_mark: Customize a theme
 
 :rocket: To turn in the assignment please submit the URL for your repo! In your README, include several screenshots of your blog running locally.
-
-## Deploying to Github
-One advantage of jekyll is that you can directly  deploy your static site to github pages. However certain themes are incompatible with github pages, including whiteglass, the theme we took you through today. In these cases, you can deploy through alternate methods, such as [paperplane.io](https://www.paperplane.io/).
-
-To see themes that are compatible with github pages, see here: [Github themes](https://pages.github.com/themes/). If you follow the instructions (making appropriate changes in Gemfile and _config.yml), make sure to run bundle install. Note that after running bundle exec jekyll serve, you'll be missing some files. While you can manually create these files, the github community has blessed us with some easy to use starterpacks. See [Cayman starter pack](https://github.com/pietromenna/jekyll-cayman-theme) to get started on the very customizable framework.
-
-
 
 #### Potential Extensions
 Some potential extensions where you could take this include:
